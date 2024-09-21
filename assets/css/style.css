@@ -1,0 +1,181 @@
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+.title{
+    font-family: "Playwrite DE Grund", cursive;
+}
+/* Flex-Layout */
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    gap:20px;
+}
+
+:root{
+    --bg-color:#0c3c60;
+    --font-color:white;
+    --footer-bg-color:#072136;
+}
+
+/* Header Code */
+header{
+    background-color: var(--bg-color);
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-color);
+    padding: 0px 70px;
+}
+
+header>nav>ul{
+    list-style: none;
+}
+header>nav>ul>li{
+    display: inline-block;
+    padding: 20px;
+}
+header>nav>ul>li>a{
+   color: var(--font-color);
+   text-decoration: none;
+}
+
+header>nav>ul>li:hover{
+    background-color: var(--footer-bg-color);
+}
+/* BAnner Code */
+.banner{
+    background:url(../images/pexels-creative-vix-9754.jpg);
+    background-size: 100%;
+    height: 670px;
+    justify-content: center;
+    align-items: end;
+
+}
+.banner>div{
+    background-color: var(--font-color);
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    line-height: 2;
+}
+
+.banner>div>p{
+    font-size: 25px;
+}
+.banner>div>h1{
+    font-size: 50px;
+}
+.btn{
+    background-color: var(--bg-color);
+    display: inline-block;
+    border: 1px solid var(--bg-color);
+    border-radius: 10px;
+    
+    padding: 10px;
+    color: white;
+    transition: 1s;
+    margin: 30px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--footer-bg-color);
+    color: lightblue;
+    box-shadow:black 0px 5px 15px;
+}
+
+/* Card */
+.card,.aboutUs,.ourClients,.contact{padding: 75px;}
+.item{
+    flex:1;
+    padding: 20px;
+    line-height: 2;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+.card>.item>p{
+    justify-content:end;
+}
+.card>.item:hover{
+    box-shadow:black 0px 5px 15px;
+}
+
+/* About Us */
+.aboutUs{
+    background:url(../images/trekking.jpg) no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+}
+.aboutUs>.item>p{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--bg-color);
+    font-family: "Playwrite DE Grund", cursive;
+    align-items: center;
+}
+
+/* OUR clients */
+.ourClients{
+    text-align: center;
+}
+
+.ourClients [class*="fa-"]{
+    color:gray;
+    transition: 1s;
+}
+
+ .ourClients [class*="fa-"]:hover{
+    color:black;
+    transform: translate(10px,-10px);
+} 
+
+/* contact */
+.contact{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+.contact input ,.contact textarea{
+    width: 100%;
+    background-color: transparent;
+    border: 1px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: inherit;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+.contact input:focus,.contact textarea:focus{
+    background-color: #fff;
+    color: var(--bg-color);
+}
+.contact>form>div>div>button{
+    padding: 15px 20px;
+    width: 100%;
+    color: var(--bg-color);
+    font-weight: bold;
+    border: 1px solid var(--bg-color);
+    box-shadow:black 0px 5px 15px;
+    border-radius: 10px;
+    transform: 1s;
+    cursor: pointer;
+}
+.contact>form>div>div>button:hover{
+    background-color: white;
+    color:var(--bg-color);
+    border: 1px solid #fff;
+
+}
+.contact>form>.item{
+    text-align: center;
+}
+
+footer{
+    background-color: var(--footer-bg-color);
+    color: var(--font-color);
+    padding: 20px;
+    text-align: center;
+}
